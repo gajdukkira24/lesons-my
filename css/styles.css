@@ -1,0 +1,52 @@
+.kodfun-galeri{
+    display: flex;
+    height: 20rem;
+    gap: 1rem;
+}
+
+.kodfun-galeri > div {
+    flex: 1;
+    border-radius: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+
+}
+.kodfun-galeri > div:hover{
+    flex: 5;
+}
+
+.container{
+    filter: grayscale();
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    transition: filter .4s ease-in-out;
+
+}
+.container:hover{
+    filter: none;
+}
+
+.title{
+    position: static;
+
+}
+.title::after{
+    position: absolute;
+    width: 0%;
+    height: 4px;
+    background-color: rgb(122, 112, 112);
+    left: 50%;
+    bottom: -10px;
+    transition: all 0.4s ease-in-out;
+
+
+}
+
+.container:hover .title::after{
+    width: 100%;
+    left: 0;
+}
+
